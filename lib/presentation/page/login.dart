@@ -1,6 +1,6 @@
 // ignore_for_file: avoid_unnecessary_containers
 import 'package:edspert_final_project/presentation/page/registration.dart';
-import 'package:edspert_final_project/presentation/page/widgets/button_widget.dart';
+import 'package:edspert_final_project/presentation/page/widgets/button_widgets.dart';
 import 'package:flutter/material.dart';
 
 import '../global/app_colors.dart';
@@ -69,7 +69,7 @@ class LoginPage extends StatelessWidget {
                       child: Column(
                         mainAxisAlignment: MainAxisAlignment.end,
                         children: [
-                          ButtonWidget(
+                          ButtonLoginWidget(
                               onTap: () => Navigator.push(
                                     context,
                                     MaterialPageRoute(
@@ -84,7 +84,7 @@ class LoginPage extends StatelessWidget {
                           const SizedBox(
                             height: 25.0,
                           ),
-                          ButtonWidget(
+                          ButtonLoginWidget(
                               onTap: () => Navigator.push(
                                     context,
                                     MaterialPageRoute(

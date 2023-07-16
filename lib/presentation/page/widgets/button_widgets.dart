@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-class ButtonWidget extends StatelessWidget {
+class ButtonLoginWidget extends StatelessWidget {
   final String title;
   final Color colorBackground;
   final Color colorForeground;
@@ -8,7 +8,7 @@ class ButtonWidget extends StatelessWidget {
   final String imgLink;
   final VoidCallback onTap;
 
-  const ButtonWidget({
+  const ButtonLoginWidget({
     super.key,
     required this.title,
     required this.imgLink,
