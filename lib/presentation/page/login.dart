@@ -1,8 +1,10 @@
 // ignore_for_file: avoid_unnecessary_containers
 import 'package:edspert_final_project/presentation/page/registration.dart';
+import 'package:edspert_final_project/presentation/page/widgets/button_widget.dart';
 import 'package:flutter/material.dart';
 
 import '../global/app_colors.dart';
+import 'assignment/assignment_one.dart';
 
 class LoginPage extends StatelessWidget {
   const LoginPage({super.key});
@@ -67,105 +69,32 @@ class LoginPage extends StatelessWidget {
                       child: Column(
                         mainAxisAlignment: MainAxisAlignment.end,
                         children: [
-                          SizedBox(
-                            width: 270,
-                            height: 50,
-                            child: ElevatedButton(
-                              style: OutlinedButton.styleFrom(
-                                elevation: 10,
-                                shadowColor: Colors.black,
-                                foregroundColor: Colors.black,
-                                backgroundColor: Colors.white,
-                                side: const BorderSide(
-                                  color: Color(0xff01B1AF),
-                                ),
-                                shape: RoundedRectangleBorder(
-                                  borderRadius: BorderRadius.circular(45),
-                                ),
-                              ),
-                              onPressed: () {
-                                Navigator.push(
-                                  context,
-                                  MaterialPageRoute(
-                                      builder: (context) => Container(
-                                            child: const Center(
-                                              child: Text(
-                                                "google",
-                                                style: TextStyle(
-                                                  fontSize: 20.0,
-                                                ),
-                                              ),
-                                            ),
-                                          )),
-                                );
-                              },
-                              child: Row(
-                                mainAxisAlignment: MainAxisAlignment.center,
-                                children: [
-                                  Image.asset(
-                                    "assets/icons/google-icon.png",
-                                    width: 35.0,
+                          ButtonWidget(
+                              onTap: () => Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                        builder: (context) =>
+                                            const AssigmentPageOne()),
                                   ),
-                                  const SizedBox(
-                                    width: 10.0,
-                                  ),
-                                  const Text(
-                                    "Masuk dengan Google",
-                                    style: TextStyle(fontSize: 16),
-                                  )
-                                ],
-                              ),
-                            ),
-                          ),
+                              title: "Masuk dengan Google",
+                              imgLink: "assets/icons/google-icon.png",
+                              colorBackground: Colors.white,
+                              colorForeground: Colors.black,
+                              colorBorder: const Color(0xFF01B1AF)),
                           const SizedBox(
                             height: 25.0,
                           ),
-                          SizedBox(
-                            width: 270,
-                            height: 50,
-                            child: ElevatedButton(
-                                style: ElevatedButton.styleFrom(
-                                  elevation: 10,
-                                  shadowColor: Colors.black,
-                                  backgroundColor: const Color(0xFF1B1F26),
-                                  foregroundColor: Colors.white,
-                                  shape: RoundedRectangleBorder(
-                                    borderRadius: BorderRadius.circular(45),
-                                  ),
-                                ),
-                                onPressed: () {
-                                  Navigator.push(
+                          ButtonWidget(
+                              onTap: () => Navigator.push(
                                     context,
                                     MaterialPageRoute(
-                                        builder: (context) => Container(
-                                              child: const Center(
-                                                child: Text(
-                                                  "Apple ID",
-                                                  style: TextStyle(
-                                                    fontSize: 20.0,
-                                                  ),
-                                                ),
-                                              ),
-                                            )),
-                                  );
-                                },
-                                child: Row(
-                                  mainAxisAlignment: MainAxisAlignment.center,
-                                  children: [
-                                    Image.asset(
-                                      "assets/icons/apple-logo.png",
-                                      width: 35,
-                                    ),
-                                    const SizedBox(
-                                      width: 10.0,
-                                    ),
-                                    const Text(
-                                      "Masuk dengan Apple ID",
-                                      style: TextStyle(fontSize: 16),
-                                    ),
-                                  ],
-                                )),
-                          ),
+                                        builder: (context) =>
+                                            const AssigmentPageOne()),
+                                  ),
+                              title: "Masuk dengan Apple ID",
+                              imgLink: "assets/icons/apple-logo.png",
+                              colorBackground: const Color(0xFF1B1F26),
+                              colorForeground: Colors.white)
                         ],
                       ),
                     )

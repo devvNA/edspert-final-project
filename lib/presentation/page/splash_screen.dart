@@ -43,7 +43,7 @@ class _SplashScreenPageState extends State<SplashScreenPage> {
                   const Align(
                     alignment: Alignment.bottomCenter,
                     child: Padding(
-                      padding: EdgeInsets.only(bottom: 180),
+                      padding: EdgeInsets.only(bottom: 190),
                       child: CircularProgressIndicator(
                         backgroundColor: Color.fromARGB(174, 255, 255, 255),
                       ),
