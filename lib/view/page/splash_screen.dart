@@ -1,6 +1,6 @@
 // ignore_for_file: override_on_non_overriding_member
 
-import 'package:edspert_final_project/presentation/global/app_colors.dart';
+import 'package:edspert_final_project/global/app_colors.dart';
 import 'package:flutter/material.dart';
 
 import 'login.dart';
