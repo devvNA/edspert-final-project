@@ -1,5 +1,5 @@
-import 'package:edspert_final_project/presentation/global/app_theme.dart';
-import 'package:edspert_final_project/presentation/page/splash_screen.dart';
+import 'package:edspert_final_project/global/app_theme.dart';
+import 'package:edspert_final_project/view/page/splash_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
