@@ -27,6 +27,8 @@ class FormRegistrationWidget extends StatelessWidget {
           height: 4.0,
         ),
         TextFormField(
+          scrollPadding: EdgeInsets.only(
+              bottom: MediaQuery.of(context).viewInsets.bottom + 50),
           initialValue: initialValue,
           controller: formController,
           decoration: InputDecoration(
@@ -69,6 +71,8 @@ class FormGenderWidget extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         TextFormField(
+          scrollPadding: EdgeInsets.only(
+              bottom: MediaQuery.of(context).viewInsets.bottom * 4),
           enabled: isChoice,
           decoration: InputDecoration(
             hintStyle: const TextStyle(
