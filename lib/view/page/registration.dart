@@ -2,7 +2,6 @@ import 'package:edspert_final_project/view/widgets/form_widget.dart';
 import 'package:flutter/material.dart';
 
 import '../../global/app_colors.dart';
-import 'home_page.dart';
 
 class RegistrationPage extends StatefulWidget {
   const RegistrationPage({super.key});
@@ -24,12 +23,14 @@ class _RegistrationPageState extends State<RegistrationPage> {
       resizeToAvoidBottomInset: false,
       backgroundColor: AppColors.grayBG,
       body: SafeArea(
-        child: ListView(
-          physics: const NeverScrollableScrollPhysics(),
-          children: [
-            _headerAppbar(),
-            _bodyContains(),
-          ],
+        child: Form(
+          child: ListView(
+            physics: const NeverScrollableScrollPhysics(),
+            children: [
+              _headerAppbar(),
+              _bodyContains(),
+            ],
+          ),
         ),
       ),
     );
@@ -198,15 +199,27 @@ class _RegistrationPageState extends State<RegistrationPage> {
           const SizedBox(
             height: 4.0,
           ),
-          TextFormField(
+          Container(
+            decoration: const BoxDecoration(
+              color: Colors.white,
+              borderRadius: BorderRadius.all(
+                Radius.circular(
+                  9,
+                ),
+              ),
+            ),
+            child: ClassFormWidget(),
+          ),
+
+/*           TextFormField(
             scrollPadding: EdgeInsets.only(
                 bottom: MediaQuery.of(context).viewInsets.bottom + 50),
             decoration: InputDecoration(
+              hintText: 'pilih kelas',
               suffixIcon: const Icon(
                 Icons.keyboard_arrow_down,
                 color: Colors.black,
               ),
-              hintText: 'pilih kelas',
               hintStyle: const TextStyle(
                   color: Color(0xFFD3D3D3),
                   fontSize: 16,
@@ -222,6 +235,7 @@ class _RegistrationPageState extends State<RegistrationPage> {
             ),
             onChanged: (value) {},
           ),
+ */
           const SizedBox(
             height: 23.0,
           ),
@@ -244,7 +258,7 @@ class _RegistrationPageState extends State<RegistrationPage> {
               ),
               onPressed: () => Navigator.push(
                 context,
-                MaterialPageRoute(builder: (context) => const HomePage()),
+                MaterialPageRoute(builder: (context) => const Placeholder()),
               ),
               child: const Text("Save"),
             ),
