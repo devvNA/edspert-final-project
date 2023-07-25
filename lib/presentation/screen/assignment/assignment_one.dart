@@ -1,4 +1,4 @@
-import 'package:edspert_final_project/global/app_colors.dart';
+import 'package:edspert_final_project/presentation/global/app_colors.dart';
 import 'package:flutter/material.dart';
 
 class AssigmentPageOne extends StatelessWidget {

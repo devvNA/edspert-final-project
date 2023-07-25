@@ -1,10 +1,11 @@
 // ignore_for_file: avoid_unnecessary_containers
-import 'package:edspert_final_project/view/page/registration.dart';
-import 'package:edspert_final_project/view/widgets/button_widgets.dart';
+import 'package:edspert_final_project/presentation/widgets/button_widgets.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 
-import '../../global/app_colors.dart';
-import 'assignment/assignment_one.dart';
+import '../../../global/app_colors.dart';
+import '../../assignment/assignment_one.dart';
+import '../../registration/view/registration_page.dart';
 
 class LoginPage extends StatefulWidget {
   const LoginPage({super.key});
@@ -19,58 +20,57 @@ class _LoginPageState extends State<LoginPage> {
     return Scaffold(
       backgroundColor: AppColors.grayBG,
       body: SafeArea(
-        child: ListView(
-          physics: const NeverScrollableScrollPhysics(),
-          padding: const EdgeInsets.all(35),
-          children: [
-            const Align(
-              alignment: Alignment.topLeft,
-              child: Text(
-                "Login",
-                style: TextStyle(
-                  fontSize: 20.0,
-                  fontWeight: FontWeight.bold,
-                ),
-              ),
-            ),
-            const SizedBox(
-              height: 30.0,
-            ),
-            Column(
-              children: [
-                Image.asset(
-                  'assets/images/login-image.png',
-                  width: 350,
-                ),
-                const SizedBox(
-                  height: 50.0,
-                ),
-                const Text(
-                  "Selamat Datang",
+        child: Padding(
+          padding: const EdgeInsets.all(30.0),
+          child: Column(
+            children: [
+              const Align(
+                alignment: Alignment.topLeft,
+                child: Text(
+                  "Login",
                   style: TextStyle(
-                    fontSize: 22.0,
-                    fontWeight: FontWeight.w500,
+                    fontSize: 20.0,
+                    fontWeight: FontWeight.bold,
                   ),
                 ),
-                const SizedBox(
-                  height: 3.0,
-                ),
-                const Text(
-                  "Selamat Datang di Aplikasi Widya Edu Aplikasi Latihan dan Konsultasi Soal",
-                  textAlign: TextAlign.center,
-                  style: TextStyle(
-                      fontSize: 14.0,
-                      color: Color(0xFF6A7483),
-                      fontWeight: FontWeight.w500),
-                ),
-              ],
-            ),
-            const SizedBox(
-              height: 20.0,
-            ),
-            Padding(
-              padding: const EdgeInsets.only(top: 80),
-              child: Row(
+              ),
+              const SizedBox(
+                height: 30.0,
+              ),
+              Column(
+                children: [
+                  SvgPicture.asset(
+                    'assets/images/login-image.svg',
+                    height: 255,
+                  ),
+                  const SizedBox(
+                    height: 40.0,
+                  ),
+                  const Text(
+                    "Selamat Datang",
+                    style: TextStyle(
+                      fontSize: 22.0,
+                      fontWeight: FontWeight.w500,
+                    ),
+                    textAlign: TextAlign.center,
+                  ),
+                  const SizedBox(
+                    height: 2.0,
+                  ),
+                  const Text(
+                    "Selamat Datang di Aplikasi Widya Edu Aplikasi Latihan dan Konsultasi Soal",
+                    textAlign: TextAlign.center,
+                    style: TextStyle(
+                        fontSize: 14.0,
+                        color: Color(0xFF6A7483),
+                        fontWeight: FontWeight.w500),
+                  ),
+                ],
+              ),
+              const Expanded(
+                child: SizedBox.shrink(),
+              ),
+              Row(
                 children: [
                   Expanded(
                     child: Column(
@@ -88,7 +88,7 @@ class _LoginPageState extends State<LoginPage> {
                             colorForeground: Colors.black,
                             colorBorder: const Color(0xFF01B1AF)),
                         const SizedBox(
-                          height: 25.0,
+                          height: 20.0,
                         ),
                         ButtonLoginWidget(
                             onTap: () => Navigator.push(
@@ -106,9 +106,8 @@ class _LoginPageState extends State<LoginPage> {
                   )
                 ],
               ),
-            ),
-            SizedBox(height: MediaQuery.of(context).viewInsets.bottom),
-          ],
+            ],
+          ),
         ),
       ),
     );

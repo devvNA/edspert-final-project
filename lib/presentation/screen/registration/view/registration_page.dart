@@ -1,7 +1,7 @@
-import 'package:edspert_final_project/view/widgets/form_widget.dart';
 import 'package:flutter/material.dart';
 
-import '../../global/app_colors.dart';
+import '../../../global/app_config.dart';
+import '../../../widgets/form_widget.dart';
 
 class RegistrationPage extends StatefulWidget {
   const RegistrationPage({super.key});
