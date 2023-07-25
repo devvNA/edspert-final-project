@@ -1,3 +1,4 @@
+import 'package:edspert_final_project/presentation/screens/home/view/home_page.dart';
 import 'package:flutter/material.dart';
 
 import '../../../global/app_config.dart';
@@ -258,7 +259,7 @@ class _RegistrationPageState extends State<RegistrationPage> {
               ),
               onPressed: () => Navigator.push(
                 context,
-                MaterialPageRoute(builder: (context) => const Placeholder()),
+                MaterialPageRoute(builder: (context) => HomePage()),
               ),
               child: const Text("Save"),
             ),

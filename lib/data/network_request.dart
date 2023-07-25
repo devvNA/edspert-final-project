@@ -6,10 +6,13 @@ class Request {
   final Dio _dio = Dio();
 
   /// Fungsi ini digunakan untuk melakukan GET request
-  Future<Response> get(String path,
-      {JSON? queryParameters, required bool requiresAuthToken}) async {
+  Future<Response> get(String path, {JSON? queryParameters}) async {
     return await _dio.get(path, queryParameters: queryParameters);
   }
+  // Future<Response> get(String path,
+  //     {JSON? queryParameters, required bool requiresAuthToken}) async {
+  //   return await _dio.get(path, queryParameters: queryParameters);
+  // }
 
   /// Fungsi ini digunakan untuk melakukan POST request
   Future<Response> post(String path,
