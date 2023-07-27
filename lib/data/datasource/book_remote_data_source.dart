@@ -2,7 +2,7 @@
 
 import 'package:dartz/dartz.dart';
 import 'package:dio/dio.dart';
-import 'package:flutter/material.dart';
+import 'package:flutter/cupertino.dart';
 
 import '../../domain/failures/failure.dart';
 import '../api_endpoints.dart';
@@ -15,16 +15,20 @@ abstract class BookRemoteDataSource {
 
 class BookRemoteDataSourceImpl extends BookRemoteDataSource {
   @override
+  @override
   Future<Either<Failure, ListBook>> getListBook() async {
     try {
       final response = await Dio().get(bookUrl);
 
       ListBook data = [];
-      for (var value in response.data['books']) {
-        final result = Book.fromJson(value);
-        data.add(result);
+      if (response.statusCode == 200) {
+        debugPrint('Status: ${response.statusMessage}');
+        for (var value in response.data) {
+          final result = Book.fromJson(value);
+          data.add(result);
+        }
       }
-      debugPrint(response.data.toString());
+      debugPrint('Data: ${response.data}');
       return Right(data);
     } on DioError catch (_) {
       return const Left(ConnectionFailure("Terjadi Kesalahan"));
