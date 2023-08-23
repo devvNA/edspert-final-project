@@ -4,12 +4,14 @@ import '../../data/types.dart';
 import '../failures/failure.dart';
 import '../repository/Book_repository.dart';
 
-class GetListBookUseCase {
-  BookRepository repository;
-  GetListBookUseCase({
+class BookUseCase {
+  BookUseCase({
     required this.repository,
   });
 
-  Future<Either<Failure, ListBook>> call() async =>
-      await repository.getListBook();
+  BookRepository repository;
+
+  Future<Either<Failure, ListBook>> getListBook() async {
+    return await repository.getListBook();
+  }
 }

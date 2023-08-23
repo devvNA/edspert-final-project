@@ -6,6 +6,7 @@ part 'book_model.g.dart';
 class Book with _$Book {
   factory Book({
     @Default('') String title,
+    @Default(0) int id,
     @Default('') String subtitle,
     @Default('') String isbn13,
     @Default('') String price,

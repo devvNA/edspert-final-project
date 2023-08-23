@@ -21,6 +21,7 @@ Book _$BookFromJson(Map<String, dynamic> json) {
 /// @nodoc
 mixin _$Book {
   String get title => throw _privateConstructorUsedError;
+  int get id => throw _privateConstructorUsedError;
   String get subtitle => throw _privateConstructorUsedError;
   String get isbn13 => throw _privateConstructorUsedError;
   String get price => throw _privateConstructorUsedError;
@@ -39,6 +40,7 @@ abstract class $BookCopyWith<$Res> {
   @useResult
   $Res call(
       {String title,
+      int id,
       String subtitle,
       String isbn13,
       String price,
@@ -60,6 +62,7 @@ class _$BookCopyWithImpl<$Res, $Val extends Book>
   @override
   $Res call({
     Object? title = null,
+    Object? id = null,
     Object? subtitle = null,
     Object? isbn13 = null,
     Object? price = null,
@@ -71,6 +74,10 @@ class _$BookCopyWithImpl<$Res, $Val extends Book>
           ? _value.title
           : title // ignore: cast_nullable_to_non_nullable
               as String,
+      id: null == id
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as int,
       subtitle: null == subtitle
           ? _value.subtitle
           : subtitle // ignore: cast_nullable_to_non_nullable
@@ -103,6 +110,7 @@ abstract class _$$_BookCopyWith<$Res> implements $BookCopyWith<$Res> {
   @useResult
   $Res call(
       {String title,
+      int id,
       String subtitle,
       String isbn13,
       String price,
@@ -120,6 +128,7 @@ class __$$_BookCopyWithImpl<$Res> extends _$BookCopyWithImpl<$Res, _$_Book>
   @override
   $Res call({
     Object? title = null,
+    Object? id = null,
     Object? subtitle = null,
     Object? isbn13 = null,
     Object? price = null,
@@ -131,6 +140,10 @@ class __$$_BookCopyWithImpl<$Res> extends _$BookCopyWithImpl<$Res, _$_Book>
           ? _value.title
           : title // ignore: cast_nullable_to_non_nullable
               as String,
+      id: null == id
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as int,
       subtitle: null == subtitle
           ? _value.subtitle
           : subtitle // ignore: cast_nullable_to_non_nullable
@@ -160,6 +173,7 @@ class __$$_BookCopyWithImpl<$Res> extends _$BookCopyWithImpl<$Res, _$_Book>
 class _$_Book implements _Book {
   _$_Book(
       {this.title = '',
+      this.id = 0,
       this.subtitle = '',
       this.isbn13 = '',
       this.price = '',
@@ -171,6 +185,9 @@ class _$_Book implements _Book {
   @override
   @JsonKey()
   final String title;
+  @override
+  @JsonKey()
+  final int id;
   @override
   @JsonKey()
   final String subtitle;
@@ -189,7 +206,7 @@ class _$_Book implements _Book {
 
   @override
   String toString() {
-    return 'Book(title: $title, subtitle: $subtitle, isbn13: $isbn13, price: $price, image: $image, url: $url)';
+    return 'Book(title: $title, id: $id, subtitle: $subtitle, isbn13: $isbn13, price: $price, image: $image, url: $url)';
   }
 
   @override
@@ -198,6 +215,7 @@ class _$_Book implements _Book {
         (other.runtimeType == runtimeType &&
             other is _$_Book &&
             (identical(other.title, title) || other.title == title) &&
+            (identical(other.id, id) || other.id == id) &&
             (identical(other.subtitle, subtitle) ||
                 other.subtitle == subtitle) &&
             (identical(other.isbn13, isbn13) || other.isbn13 == isbn13) &&
@@ -209,7 +227,7 @@ class _$_Book implements _Book {
   @JsonKey(ignore: true)
   @override
   int get hashCode =>
-      Object.hash(runtimeType, title, subtitle, isbn13, price, image, url);
+      Object.hash(runtimeType, title, id, subtitle, isbn13, price, image, url);
 
   @JsonKey(ignore: true)
   @override
@@ -228,6 +246,7 @@ class _$_Book implements _Book {
 abstract class _Book implements Book {
   factory _Book(
       {final String title,
+      final int id,
       final String subtitle,
       final String isbn13,
       final String price,
@@ -238,6 +257,8 @@ abstract class _Book implements Book {
 
   @override
   String get title;
+  @override
+  int get id;
   @override
   String get subtitle;
   @override
