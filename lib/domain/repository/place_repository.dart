@@ -7,4 +7,6 @@ import '../failures/failure.dart';
 
 abstract class PlaceRepository {
   Future<Either<Failure, ListPlace>> getListPlace();
+  Future<Either<Failure, ListPlace>> postListPlace();
+  Future<Either<Failure, ListPlace>> putListPlace();
 }

@@ -3,7 +3,7 @@ import 'package:flutter/services.dart';
 import 'package:get/get.dart';
 
 import 'presentation/global/app_theme.dart';
-import 'presentation/screens/splash_screen/view/splash_screen.dart';
+import 'presentation/pages/splash_screen/view/splash_screen.dart';
 
 void main() {
   runApp(const MyApp());

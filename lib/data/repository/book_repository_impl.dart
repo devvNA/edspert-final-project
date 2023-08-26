@@ -4,7 +4,7 @@ import 'package:edspert_final_project/data/types.dart';
 
 
 import '../../domain/failures/failure.dart';
-import '../../domain/repository/Book_repository.dart';
+import '../../domain/repository/book_repository.dart';
 import '../datasource/book_remote_data_source.dart';
 
 class BookRepositoryImpl extends BookRepository {

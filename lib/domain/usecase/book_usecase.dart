@@ -2,7 +2,7 @@ import 'package:dartz/dartz.dart';
 
 import '../../data/types.dart';
 import '../failures/failure.dart';
-import '../repository/Book_repository.dart';
+import '../repository/book_repository.dart';
 
 class BookUseCase {
   BookUseCase({

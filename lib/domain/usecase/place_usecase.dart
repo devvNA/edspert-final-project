@@ -15,19 +15,11 @@ class PlaceUseCase {
     return await repository.getListPlace();
   }
 
-  Future<Either<Failure, ListPlace>> deleteListPlace() async {
-    return await repository.getListPlace();
+  Future<Either<Failure, ListPlace>> postListPlace() async {
+    return await repository.postListPlace();
   }
 
-  Future<Either<Failure, ListPlace>> updateListPlace() async {
-    return await repository.getListPlace();
-  }
-
-  Future<Either<Failure, ListPlace>> pullListPlace() async {
-    return await repository.getListPlace();
-  }
-
-  Future<Either<Failure, ListPlace>> pushListPlace() async {
-    return await repository.getListPlace();
+  Future<Either<Failure, ListPlace>> putListPlace() async {
+    return await repository.putListPlace();
   }
 }
